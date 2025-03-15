@@ -27,7 +27,7 @@ Feel free to explore these repositories to see my coding style and approach to p
 
 ## 📫 Contact Me
 
-- **Email**: [your-email@example.com](mailto:ahmadmahboob4545@gmail.com)
+- **Email**: [ahmadmahboob4545@gmail.com](mailto:ahmadmahboob4545@gmail.com)
 
 Let's connect and collaborate on exciting projects!
 
