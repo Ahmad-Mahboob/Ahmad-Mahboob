@@ -7,7 +7,7 @@ const projects = [
     description: "I used HTML, CSS and JavaScript to Develop This Completely Functional Calculator App. This Calculator App Can Handle Basic Arithmetic Functions like addition, subtraction, etc. I used HTML, CSS and JavaScript to Develop This Completely Functional Calculator App. This Calculator App Can Handle Basic Arithmetic Functions like addition, subtraction, etc. I used HTML, CSS and JavaScript to Develop This Completely Functional Calculator App. This Calculator App Can Handle Basic Arithmetic Functions like addition, subtraction, etc.I used HTML, CSS and JavaScript to Develop This Completely Functional Calculator App. This Calculator App Can Handle Basic Arithmetic Functions like addition, subtraction, etc.",
     gitHubLink: "https://github.com/Ahmad-Mahboob/Tic-Tac-Toe-Game",
     publicLink: "https://ahmad-mahboob.github.io/Tic-Tac-Toe-Game/",
-    imgSrc: "/resources/img/demo.jpg"
+    imgSrc: "/Ahmad-Mahboob/resources/img/demo.jpg"
   },
   {
     id: 1,
@@ -15,7 +15,7 @@ const projects = [
     description: "I used HTML, CSS and JavaScript to Develop This Completely Functional Calculator App. This Calculator App Can Handle Basic Arithmetic Functions like addition, subtraction, etc.",
     gitHubLink: "https://www.github.com",
     publicLink: "https://www.github.com",
-    imgSrc: "/resources/img/demo.jpg"
+    imgSrc: "/Ahmad-Mahboob/resources/img/demo.jpg"
   },
   {
     id: 1,
@@ -23,7 +23,7 @@ const projects = [
     description: "I used HTML, CSS and JavaScript to Develop This Completely Functional Calculator App. This Calculator App Can Handle Basic Arithmetic Functions like addition, subtraction, etc.",
     gitHubLink: "https://www.github.com",
     publicLink: "https://www.github.com",
-    imgSrc: "/resources/img/demo.jpg"
+    imgSrc: "/Ahmad-Mahboob/resources/img/demo.jpg"
   },
   {
     id: 1,
@@ -31,7 +31,7 @@ const projects = [
     description: "I used HTML, CSS and JavaScript to Develop This Completely Functional Calculator App. This Calculator App Can Handle Basic Arithmetic Functions like addition, subtraction, etc.",
     gitHubLink: "https://www.github.com",
     publicLink: "https://www.github.com",
-    imgSrc: "/resources/img/demo.jpg"
+    imgSrc: "/Ahmad-Mahboob/resources/img/demo.jpg"
   },
 ];
 
@@ -134,3 +134,4 @@ spans.forEach((span, index) => {
 
   updateText();
 });
+
