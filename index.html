@@ -121,44 +121,59 @@
       </div>
     </header>
     <main>
-      <section id="home" class="w-full flex flex-col lg:flex-row">
-        <div
-          class="w-full lg:w-1/2 h-auto lg:h-[90vh] flex flex-col p-6 sm:p-10 lg:p-[8%]"
-        >
-          <p class="text-xl sm:text-2xl font-semibold">I'm</p>
+     <section
+      id="home"
+      class="w-full flex flex-col-reverse md:flex-row items-center"
+    >
+      <!-- Left Content -->
+      <div
+        class="w-full lg:w-1/2 flex flex-col px-4 py-8 sm:px-6 sm:py-10 lg:p-[8%] text-left items-center md:items-start"
+      >
+        <div class="relative inline-block text-left w-fit">
+          <!-- "I'm" -->
+          <p
+            class="text-lg sm:text-xl font-semibold absolute top-0 left-0 -translate-y-full"
+          >
+            I'm
+          </p>
+
+          <!-- Name Heading -->
           <h2
-            class="text-4xl sm:text-6xl lg:text-8xl font-extrabold text-gray-700"
+            class="text-4xl sm:text-6xl lg:text-7xl font-extrabold text-gray-700"
           >
             Ahmad Mahboob
           </h2>
-          <h2 class="text-lg sm:text-xl lg:text-2xl font-semibold">
-            <span id="typed" class="inline text-blue-600 font-semibold"></span>
-          </h2>
-
-          <button
-            id="ctaButton"
-            class="relative inline-block text-lg sm:text-xl lg:text-2xl mt-10 px-6 py-6 text-white bg-blue-600 rounded-lg overflow-hidden shadow-md hover:bg-blue-700 transition-all duration-300 cursor-pointer"
-          >
-            <span class="absolute inset-0 flex items-center justify-center">
-              <span id="typedButton" class="inline whitespace-nowrap"></span>
-            </span>
-          </button>
         </div>
 
-        <div
-          class="w-full lg:w-1/2 h-80 sm:h-[50vh] lg:h-[90vh] flex justify-center items-center"
+        <h2 class="text-base sm:text-lg lg:text-2xl font-semibold mt-2">
+          <span id="typed" class="inline text-blue-600 font-semibold"></span>
+        </h2>
+
+        <button
+          id="ctaButton"
+          class="relative w-full max-w-xs lg:mx-0 text-base sm:text-lg lg:text-xl mt-6 px-5 py-4 text-white bg-blue-600 rounded-lg overflow-hidden shadow-md hover:bg-blue-700 transition-all duration-300"
         >
-          <div
-            class="w-56 h-56 sm:w-72 sm:h-72 md:w-96 md:h-96 rounded-full overflow-hidden shadow-lg"
-          >
-            <img
-              src="/Ahmad-Mahboob/resources/img/Ahmad-Mahboob.png"
-              alt="Profile"
-              class="w-full h-full object-cover"
-            />
-          </div>
+          <span class="absolute inset-0 flex items-center justify-center">
+            <span id="typedButton" class="inline whitespace-nowrap"></span>
+          </span>
+        </button>
+      </div>
+
+      <!-- Right Image -->
+      <div
+        class="w-full lg:w-1/2 flex justify-center items-center mb-8 lg:mb-0"
+      >
+        <div
+          class="w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 rounded-full overflow-hidden shadow-lg"
+        >
+          <img
+            src="/Ahmad-Mahboob/resources/img/Ahmad-Mahboob.png"
+            alt="Profile"
+            class="w-full h-full object-cover"
+          />
         </div>
-      </section>
+      </div>
+    </section>
 
       <section
         id="about"
