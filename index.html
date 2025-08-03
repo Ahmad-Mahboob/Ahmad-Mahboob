@@ -1,177 +1,336 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Simple Facebook-like UI</title>
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="bg-gray-100">
-  <!-- Top Navbar -->
-  <header class="bg-blue-600 p-4 flex items-center justify-between">
-    <!-- Logo / Search -->
-    <div class="flex items-center space-x-4">
-      <h1 class="text-white font-bold text-xl">MyBook</h1>
-      <div class="relative">
-        <input
-          type="text"
-          placeholder="Search MyBook"
-          class="pl-8 pr-4 py-2 rounded bg-blue-500 text-white placeholder-gray-200 focus:outline-none"
-        />
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          class="h-5 w-5 absolute left-2 top-2 text-white"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/output.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <title>Ahmad Mahboob - Full Stack Web Developer</title>
+    <style>
+      /* scrollbar.css */
+      .custom-scrollbar {
+        scrollbar-width: thin; /* For Firefox */
+        scrollbar-color: #2563eb #e5e7eb; /* For Firefox (thumb, track) */
+      }
+
+      /* For WebKit browsers (Chrome, Edge, Safari) */
+      .custom-scrollbar::-webkit-scrollbar {
+        width: 8px;
+      }
+
+      .custom-scrollbar::-webkit-scrollbar-track {
+        background: #e5e7eb; /* Tailwind gray-200 */
+      }
+
+      .custom-scrollbar::-webkit-scrollbar-thumb {
+        background-color: #2563eb; /* Tailwind blue-600 */
+        border-radius: 6px;
+        border: 2px solid #e5e7eb; /* Padding around thumb */
+      }
+    </style>
+  </head>
+  <body class="bg-gray-200">
+    <header class="fixed inset-x-0 top-0 z-50">
+      <nav
+        id="navbar"
+        class="flex items-center justify-between mt-2 p-3 lg:px-10 bg-gray-50 text-gray-800 shadow-md top-4 rounded-4xl max-w-sm md:max-w-2xl lg:max-w-4xl mx-auto w-full z-10"
+        aria-label="Global"
+      >
+        <div class="flex lg:flex-1">
+          <a
+            href="#"
+            class="-m-1.5 p-1.5 text-4xl font-[helvetica] text-[51B1F5]"
+          >
+            Me
+          </a>
+        </div>
+
+        <div class="hidden lg:flex lg:gap-x-12">
+          <a
+            href="#home"
+            class="block border-transparent active:border-b-4 active:border-b-yellow-400 px-4 py-2 text-sm font-semibold hover:bg-gray-200 rounded-md transition duration-300"
+            >Home</a
+          >
+          <a
+            href="#about"
+            class="block border-transparent active:border-b-4 hover:border-b-yellow-400 px-4 py-2 text-sm font-semibold hover:bg-gray-200 rounded-md transition duration-300"
+            >About</a
+          >
+          <a
+            href="#projects"
+            class="block border-transparent active:border-b-4 hover:border-b-yellow-400 px-4 py-2 text-sm font-semibold hover:bg-gray-200 rounded-md transition duration-300"
+            >Projects</a
+          >
+          <a
+            href="#services"
+            class="block border-transparent active:border-b-4 hover:border-b-yellow-400 px-4 py-2 text-sm font-semibold hover:bg-gray-200 rounded-md transition duration-300"
+            >Services</a
+          >
+        </div>
+        <div class="lg:hidden">
+          <button class="text-gray-900 text-3xl burgerBtn">☰</button>
+        </div>
+
+        <div class="hidden lg:flex lg:justify-end ml-5">
+          <a
+            href="#contact"
+            class="border-transparent active:border-b-4 hover:border-b-yellow-400 px-4 py-2 text-sm font-semibold text-gray-900 hover:bg-gray-200 rounded-md transition duration-300 cursor-pointer"
+            >Contact
+          </a>
+        </div>
+      </nav>
+
+      <div
+        class="burgerMenu fixed top-0 right-0 h-screen w-1/2 z-50 bg-white transform translate-x-full transition-transform duration-500 ease-in-out flex flex-col items-center"
+      >
+        <!-- X Button -->
+        <button
+          class="burgerCloseBtn absolute top-4 md:top-6 left-4 text-2xl font-bold md:text-5xl"
         >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 1116.65 16.65z"
-          />
-        </svg>
+          X
+        </button>
+
+        <!-- Menu Items -->
+        <ul class="mt-20 md:mt-48 w-full px-6">
+          <li
+            class="text-3xl md:text-5xl p-3 mt-2 md:mt-8 hover:bg-gray-200 rounded-md transition duration-300 cursor-pointer"
+          >
+            <a href="#home">Home</a>
+          </li>
+          <li
+            class="text-3xl md:text-5xl p-3 mt-2 md:mt-8 hover:bg-gray-200 rounded-md transition duration-300 cursor-pointer"
+          >
+            <a href="#about">About</a>
+          </li>
+          <li
+            class="text-3xl md:text-5xl p-3 mt-2 md:mt-8 hover:bg-gray-200 rounded-md transition duration-300 cursor-pointer"
+          >
+            <a href="#projects">Projects</a>
+          </li>
+          <li
+            class="text-3xl md:text-5xl p-3 mt-2 md:mt-8 hover:bg-gray-200 rounded-md transition duration-300 cursor-pointer"
+          >
+            <a href="#services"> Services </a>
+          </li>
+          <li
+            class="text-3xl md:text-5xl p-3 mt-2 md:mt-8 hover:bg-gray-200 rounded-md transition duration-300 cursor-pointer"
+          >
+            <a href="#contact">Contact</a>
+          </li>
+        </ul>
       </div>
-    </div>
-    <!-- Navigation Icons -->
-    <nav class="flex items-center space-x-6 text-white">
-      <button class="hover:bg-blue-500 p-2 rounded">Home</button>
-      <button class="hover:bg-blue-500 p-2 rounded">Watch</button>
-      <button class="hover:bg-blue-500 p-2 rounded">Marketplace</button>
-      <button class="hover:bg-blue-500 p-2 rounded">Groups</button>
-    </nav>
-    <!-- Profile & Actions -->
-    <div class="flex items-center space-x-4">
-      <img
-        src="https://via.placeholder.com/32"
-        alt="avatar"
-        class="rounded-full"
-      />
-      <button class="bg-blue-500 p-2 rounded-full hover:bg-blue-400">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          class="h-5 w-5 text-white"
-          viewBox="0 0 20 20"
-          fill="currentColor"
+    </header>
+    <main>
+      <section id="home" class="w-full flex flex-col lg:flex-row">
+        <div
+          class="w-full lg:w-1/2 h-auto lg:h-[90vh] flex flex-col p-6 sm:p-10 lg:p-[8%]"
         >
-          <path
-            d="M5.05 4.05a7 7 0 119.9 9.9 7 7 0 01-9.9-9.9z"
-          />
-        </svg>
-      </button>
-    </div>
-  </header>
+          <p class="text-xl sm:text-2xl font-semibold">I'm</p>
+          <h2
+            class="text-4xl sm:text-6xl lg:text-8xl font-extrabold text-gray-700"
+          >
+            Ahmad Mahboob
+          </h2>
+          <h2 class="text-lg sm:text-xl lg:text-2xl font-semibold">
+            <span id="typed" class="inline text-blue-600 font-semibold"></span>
+          </h2>
 
-  <!-- Main Content -->
-  <main class="max-w-6xl mx-auto mt-6 grid grid-cols-12 gap-6">
-    <!-- Left Sidebar -->
-    <aside class="col-span-3 bg-white p-4 rounded shadow">
-      <ul class="space-y-3">
-        <li class="flex items-center space-x-3 hover:bg-gray-100 p-2 rounded">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A9 9 0 0112 3v0a9 9 0 016.879 14.804" />
-          </svg>
-          <span>Friends</span>
-        </li>
-        <li class="flex items-center space-x-3 hover:bg-gray-100 p-2 rounded">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7h18M3 12h18M3 17h18" />
-          </svg>
-          <span>Pages</span>
-        </li>
-        <li class="flex items-center space-x-3 hover:bg-gray-100 p-2 rounded">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-red-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-          </svg>
-          <span>Events</span>
-        </li>
-      </ul>
-    </aside>
+          <button
+            id="ctaButton"
+            class="relative inline-block text-lg sm:text-xl lg:text-2xl mt-10 px-6 py-6 text-white bg-blue-600 rounded-lg overflow-hidden shadow-md hover:bg-blue-700 transition-all duration-300 cursor-pointer"
+          >
+            <span class="absolute inset-0 flex items-center justify-center">
+              <span id="typedButton" class="inline whitespace-nowrap"></span>
+            </span>
+          </button>
+        </div>
 
-    <!-- Feed -->
-    <section class="col-span-6 space-y-6">
-      <!-- Create Post Box -->
-      <div class="bg-white p-4 rounded shadow">
-        <div class="flex space-x-3">
-          <img src="https://via.placeholder.com/40" alt="avatar" class="rounded-full" />
+        <div
+          class="w-full lg:w-1/2 h-80 sm:h-[50vh] lg:h-[90vh] flex justify-center items-center"
+        >
+          <div
+            class="w-56 h-56 sm:w-72 sm:h-72 md:w-96 md:h-96 rounded-full overflow-hidden shadow-lg"
+          >
+            <img
+              src="/resources/img/Ahmad-Mahboob.png"
+              alt="Profile"
+              class="w-full h-full object-cover"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="about"
+        data-aos="fade-up"
+        class="about w-full flex items-center flex-col h-auto px-16 lg:px-48 py-5 bg-blue-200"
+      >
+        <h4 class="">
+          <span
+            class="textWhoAmI text-4xl font-bold text-blue-600 min-h-[3rem]"
+          ></span>
+          <span class="invisible text-4xl">W</span>
+        </h4>
+        <p
+          class="md:text-2xl text-gray-500 text-wrap lg:tracking-wider leading-relaxed mt-6"
+        >
+          Hi, I'm Ahmad Mahboob — a passionate and motivated web developer
+          focused on creating clean, responsive websites. I enjoy turning ideas
+          into real, working products that are easy to use and visually
+          appealing. I'm constantly learning and improving my skills to deliver
+          high-quality work. Whether it's a simple website or a custom solution,
+          I'm dedicated to helping clients bring their vision to life with care
+          and attention to detail.
+        </p>
+        <div class="mt-4">
+          <button class="h-auto px-4 py-2 bg-blue-600 rounded-md text-gray-100">
+            <a href="#">Learn More</a>
+          </button>
+          <button class="h-auto px-4 py-2 bg-blue-600 rounded-md text-gray-100">
+            <a href="#">View Resume</a>
+          </button>
+        </div>
+      </section>
+
+      <section class="px-10 pb-5 pt-5 flex items-center flex-col">
+        <h2
+          class="text-4xl lg:text-5xl font-bold text-blue-600 min-h-[3rem] mb-3 md:mb-5"
+        >
+          My Expertise
+        </h2>
+        <div
+          id="skills-container"
+          class="skills-container flex flex-col md:flex-row md:flex-wrap justify-center"
+        ></div>
+      </section>
+
+      <!-- Projects Section-->
+
+      <section
+        data-aos="fade-up"
+        class="flex items-center flex-col bg-blue-200 py-5"
+      >
+        <h2
+          class="text-4xl lg:text-5xl font-bold text-blue-600 min-h-[3rem] mb-3 md:mb-5"
+        >
+          My Projects
+        </h2>
+        <div
+          id="projects"
+          data-aos-delay="100"
+          class="projects-container flex flex-col md:flex-row md:flex-wrap justify-center pb-5"
+        ></div>
+      </section>
+
+      <!-- Contact Form-->
+
+      <section id="contact" class="bg-gray-100 py-20 px-6 sm:px-10 lg:px-32">
+        <h2 class="text-4xl font-bold text-center mb-6" data-aos="fade-up">
+          Contact Me
+        </h2>
+        <p
+          class="text-center text-gray-600 mb-12"
+          data-aos="fade-up"
+          data-aos-delay="100"
+        >
+          I'm always open to discussing new projects, creative ideas, or
+          opportunities to be part of your vision.
+        </p>
+
+        <form
+          class="max-w-3xl mx-auto grid grid-cols-1 gap-6"
+          data-aos="fade-up"
+          data-aos-delay="200"
+          method="post"
+          action="http://localhost:3000/api/send/message"
+        >
           <input
             type="text"
-            placeholder="What's on your mind?"
-            class="flex-1 bg-gray-100 rounded-full px-4 py-2 focus:outline-none"
+            name="name"
+            placeholder="Your Name"
+            class="p-3 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400"
+            required
           />
+          <input
+            type="email"
+            name="email"
+            placeholder="Your Email"
+            class="p-3 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400"
+            required
+          />
+          <textarea
+            placeholder="Your Message"
+            name="message"
+            rows="5"
+            class="p-3 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400"
+            required
+          ></textarea>
+          <button
+            type="submit"
+            class="bg-blue-600 text-white py-3 px-6 rounded hover:bg-blue-700 transition cursor-pointer"
+          >
+            Send Message
+          </button>
+        </form>
+
+        <div class="mt-12 text-center" data-aos="fade-up" data-aos-delay="200">
+          <p class="mb-4 text-gray-600">Or reach me directly:</p>
+          <p class="text-lg text-gray-800">
+            <a href="mailto:ahmadmahboob4545@gmail.com"
+              >📧 ahmadmahboob4545@gmail.com</a
+            >
+          </p>
+          <p class="text-lg text-gray-800">
+            💬
+            <a href="https://wa.me/923xxxxxxxxx" target="_blank"
+              >Message me on WhatsApp</a
+            >
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <!--
+    Footer
+    -->
+    <footer data-aos="fade-up" class="bg-blue-200 text-gray-500 py-8 px-6">
+      <div
+        class="max-w-5xl mx-auto flex flex-col sm:flex-row justify-between items-center"
+      >
+        <p class="text-lg font-bold">Ahmad Mahboob</p>
+
+        <ul class="flex gap-6 mt-4 sm:mt-0">
+          <li><a href="#about" class="hover:underline">About</a></li>
+          <li><a href="#projects" class="hover:underline">Projects</a></li>
+          <li><a href="#contact" class="hover:underline">Contact</a></li>
+        </ul>
+
+        <div class="flex gap-4 mt-4 sm:mt-0">
+          <a href="https://github.com/Ahmad-Mahboob" target="_blank"
+            ><img
+              src="/resources/img/GitHub.png"
+              alt="GitHub Icon"
+              class="w-6 h-6"
+          /></a>
+          <a
+            href="https://www.linkedin.com/in/ahmad-mahboob-4300832bb/"
+            target="_blank"
+            ><img src="/resources/img/LinkedIn.png" class="w-6 h-6"
+          /></a>
         </div>
       </div>
 
-      <!-- Sample Post -->
-      <div class="bg-white rounded shadow">
-        <div class="p-4">
-          <div class="flex items-center space-x-3">
-            <img src="https://via.placeholder.com/40" alt="avatar" class="rounded-full" />
-            <div>
-              <p class="font-semibold">John Doe</p>
-              <p class="text-sm text-gray-500">2 hrs ago</p>
-            </div>
-          </div>
-          <p class="mt-4">Enjoying the beautiful sunset today!</p>
-        </div>
-        <img src="https://via.placeholder.com/600x300" alt="post image" class="w-full" />
-        <div class="px-4 py-2 flex justify-between text-gray-600">
-          <button class="flex items-center space-x-1 like-btn">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 like-icon" viewBox="0 0 20 20" fill="currentColor">
-              <path d="M2 10c0-3.866 3.582-7 8-7s8 3.134 8 7-3.582 7-8 7-8-3.134-8-7z" />
-            </svg>
-            <span class="like-count">0</span> Like
-          </button>
-          <button class="flex items-center space-x-1">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v8l-4-4H7a2 2 0 01-2-2V6a2 2 0 012-2h2" />
-            </svg>
-            <span>Comment</span>
-          </button>
-          <button class="flex items-center space-x-1">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
-            </svg>
-            <span>Share</span>
-          </button>
-        </div>
+      <div class="text-center mt-6 text-sm text-gray-500">
+        &copy; 2025 Ahmad Mahboob. All rights reserved.
       </div>
-    </section>
+    </footer>
 
-    <!-- Right Sidebar -->
-    <aside class="col-span-3 bg-white p-4 rounded shadow">
-      <h2 class="font-semibold mb-4">People You May Know</h2>
-      <ul class="space-y-4">
-        <li class="flex items-center justify-between">
-          <div class="flex items-center space-x-3">
-            <img src="https://via.placeholder.com/32" alt="user" class="rounded-full" />
-            <span>Jane Smith</span>
-          </div>
-          <button class="bg-blue-600 text-white px-2 py-1 rounded text-sm">Add Friend</button>
-        </li>
-        <li class="flex items-center justify-between">
-          <div class="flex items-center space-x-3">
-            <img src="https://via.placeholder.com/32" alt="user" class="rounded-full" />
-            <span>Bob Lee</span>
-          </div>
-          <button class="bg-blue-600 text-white px-2 py-1 rounded text-sm">Add Friend</button>
-        </li>
-      </ul>
-    </aside>
-  </main>
-
-  <!-- JavaScript for Like Button -->
-  <script>
-    document.querySelectorAll('.like-btn').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const countSpan = btn.querySelector('.like-count');
-        let count = parseInt(countSpan.textContent);
-        countSpan.textContent = count + 1;
-        btn.querySelector('.like-icon').classList.toggle('text-blue-600');
-      });
-    });
-  </script>
-</body>
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="skills.js"></script>
+    <script src="script.js"></script>
+    <script src="typing.js"></script>
+    <script src="projects.js"></script>
+  </body>
 </html>
