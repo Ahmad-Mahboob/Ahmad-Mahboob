@@ -3,27 +3,27 @@ const skillContainer = document.querySelector('#skills-container');
 const skills = [
     {
         name: 'HTML',
-        img: '/resources/img/html-logo.png'
+        img: '/Ahmad-Mahboob/resources/img/html-logo.png'
     },
     {
         name: 'CSS',
-        img: '/resources/img/CSS3.png'
+        img: '/Ahmad-Mahboob/resources/img/CSS3.png'
     },
     {
         name: 'JS',
-        img: '/resources/img/JavaScript.png'
+        img: '/Ahmad-Mahboob/resources/img/JavaScript.png'
     },
     {
         name: 'Tailwind CSS',
-        img: '/resources/img/Tailwind-CSS.png'
+        img: '/Ahmad-Mahboob/resources/img/Tailwind-CSS.png'
     },
     {
         name: 'NodeJS',
-        img: '/resources/img/Node.js.png'
+        img: '/Ahmad-Mahboob/resources/img/Node.js.png'
     },
     {
         name: 'ExpressJS',
-        img: '/resources/img/Express.png',
+        img: '/Ahmad-Mahboob/resources/img/Express.png',
         css_classes: 'invert'
     },
 ]
@@ -48,4 +48,5 @@ skills.forEach((skill) => {
         <p class="text-center font-semibold text-4xl md:text-5xl">${skill.name}</p>
         </div>`
     )
+
 })
