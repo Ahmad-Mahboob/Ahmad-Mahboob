@@ -3,27 +3,27 @@ const skillContainer = document.querySelector('#skills-container');
 const skills = [
     {
         name: 'HTML',
-        img: '/Ahmad-Mahboob/resources/img/html-logo.png'
+        img: '/resources/img/html-logo.png'
     },
     {
         name: 'CSS',
-        img: '/Ahmad-Mahboob/resources/img/CSS3.png'
+        img: '/resources/img/CSS3.png'
     },
     {
         name: 'JS',
-        img: '/Ahmad-Mahboob/resources/img/JavaScript.png'
+        img: '/resources/img/JavaScript.png'
     },
     {
         name: 'Tailwind CSS',
-        img: '/Ahmad-Mahboob/resources/img/Tailwind-CSS.png'
+        img: '/resources/img/Tailwind-CSS.png'
     },
     {
         name: 'NodeJS',
-        img: '/Ahmad-Mahboob/resources/img/Node.js.png'
+        img: '/resources/img/Node.js.png'
     },
     {
         name: 'ExpressJS',
-        img: '/Ahmad-Mahboob/resources/img/Express.png',
+        img: '/resources/img/Express.png',
         css_classes: 'invert'
     },
 ]
@@ -50,3 +50,4 @@ skills.forEach((skill) => {
     )
 
 })
+
