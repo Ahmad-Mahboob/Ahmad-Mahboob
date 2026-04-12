@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -33,10 +33,11 @@
     <header class="fixed inset-x-0 top-0 z-50">
       <nav
         id="navbar"
-        class="flex items-center justify-between mt-2 p-3 lg:px-10 bg-gray-50 text-gray-800 shadow-md top-4 rounded-4xl max-w-sm md:max-w-2xl lg:max-w-4xl mx-auto w-full z-10"
+        class="flex justify-end md:items-center md:justify-around md:mt-2 p-3 lg:px-10 bg-gray-50 text-gray-800 shadow-md md:top-4 md:rounded-4xl md:max-w-2xl lg:max-w-4xl mx-auto w-full z-10"
         aria-label="Global"
       >
-        <div class="flex lg:flex-1">
+        <!--
+              <div class="flex lg:flex-1">
           <a
             href="#"
             class="-m-1.5 p-1.5 text-4xl font-[helvetica] text-[51B1F5]"
@@ -44,8 +45,9 @@
             Me
           </a>
         </div>
+      -->
 
-        <div class="hidden lg:flex lg:gap-x-12">
+        <div class="hidden md:flex lg:gap-x-12">
           <a
             href="#home"
             class="block border-transparent active:border-b-4 active:border-b-yellow-400 px-4 py-2 text-sm font-semibold hover:bg-gray-200 rounded-md transition duration-300"
@@ -66,18 +68,17 @@
             class="block border-transparent active:border-b-4 hover:border-b-yellow-400 px-4 py-2 text-sm font-semibold hover:bg-gray-200 rounded-md transition duration-300"
             >Services</a
           >
-        </div>
-        <div class="lg:hidden">
-          <button class="text-gray-900 text-3xl burgerBtn">☰</button>
-        </div>
-
-        <div class="hidden lg:flex lg:justify-end ml-5">
           <a
             href="#contact"
             class="border-transparent active:border-b-4 hover:border-b-yellow-400 px-4 py-2 text-sm font-semibold text-gray-900 hover:bg-gray-200 rounded-md transition duration-300 cursor-pointer"
             >Contact
           </a>
         </div>
+        <div class="md:hidden">
+          <button class="text-gray-900 text-3xl burgerBtn">☰</button>
+        </div>
+
+        <!-- <div class="hidden lg:flex lg:justify-end ml-5"></div> -->
       </nav>
 
       <div
@@ -85,9 +86,9 @@
       >
         <!-- X Button -->
         <button
-          class="burgerCloseBtn absolute top-4 md:top-6 left-4 text-2xl font-bold md:text-5xl"
+          class="burgerCloseBtn absolute top-4 md:top-6 left-4 text-4xl font-semibold md:text-5xl"
         >
-          X
+          ⨯
         </button>
 
         <!-- Menu Items -->
@@ -127,7 +128,7 @@
       >
         <!-- Left Content -->
         <div
-          class="w-full lg:w-1/2 flex flex-col px-4 py-8 sm:px-6 sm:py-10 lg:p-[8%] text-left items-center md:items-start"
+          class="w-full lg:w-1/2 flex flex-col md:gap-6 px-4 py-8 sm:px-6 sm:py-10 lg:p-[8%] text-left md:items-center md:items-start"
         >
           <div class="relative inline-block text-left w-fit">
             <!-- "I'm" -->
@@ -151,10 +152,12 @@
 
           <button
             id="ctaButton"
-            class="relative w-full max-w-xs lg:mx-0 text-base sm:text-lg lg:text-xl mt-6 px-5 py-4 text-white bg-blue-600 rounded-lg overflow-hidden shadow-md hover:bg-blue-700 transition-all duration-300"
+            class="relative w-full max-w-xs cursor-pointer hover:scale-110 lg:mx-0 text-base sm:text-lg lg:text-xl mt-6 px-5 py-6 text-white bg-blue-600 rounded-lg overflow-hidden shadow-md hover:bg-blue-700 transition-all duration-300"
           >
             <span class="absolute inset-0 flex items-center justify-center">
-              <span id="typedButton" class="inline whitespace-nowrap"></span>
+              <span id="typedButton" class="inline whitespace-nowrap"
+                >Let's Work Together</span
+              >
             </span>
           </button>
         </div>
@@ -198,9 +201,9 @@
           and attention to detail.
         </p>
         <div class="mt-4">
-          <button class="h-auto px-4 py-2 bg-blue-600 rounded-md text-gray-100">
+          <!-- <button class="h-auto px-4 py-2 bg-blue-600 rounded-md text-gray-100">
             <a href="#">Learn More</a>
-          </button>
+          </button> -->
           <button class="h-auto px-4 py-2 bg-blue-600 rounded-md text-gray-100">
             <a href="#">View Resume</a>
           </button>
@@ -215,7 +218,7 @@
         </h2>
         <div
           id="skills-container"
-          class="skills-container flex flex-col sm:flex-row sm:flex-wrap justify-center"
+          class="skills-container flex flex-row flex-wrap justify-center"
         ></div>
       </section>
 
@@ -330,9 +333,7 @@
           <a
             href="https://www.linkedin.com/in/ahmad-mahboob-dev/"
             target="_blank"
-            ><img
-              src="resources/img/LinkedIn.webp"
-              class="w-6 h-6"
+            ><img src="resources/img/LinkedIn.webp" class="w-6 h-6"
           /></a>
         </div>
       </div>

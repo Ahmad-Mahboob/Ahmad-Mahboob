@@ -36,7 +36,7 @@ skills.forEach((skill) => {
         `<div
         data-aos="fade-up"
         data-aos-delay="100"
-        class="skill bg-neutral-800 text-gray-300 flex flex-col justify-between w-56 h-76 sm:w-68 sm:h-84 md:w-72 md:h-84 m-3 shadow-lg pb-4 pt-4 rounded-lg transform transition-transform duration-300 hover:scale-105"
+        class="skill bg-neutral-800 text-gray-300 flex flex-col justify-between w-48 h-56 sm:w-50 sm:h-70 md:w-72 md:h-84 m-3 shadow-lg pb-4 pt-4 rounded-lg transform transition-transform duration-300 hover:scale-105"
         >
         <div class="img overflow-hidden pt-2">
         <img
