@@ -6,20 +6,7 @@
     <link rel="stylesheet" href="./src/output.css" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <title>Ahmad Mahboob - Full Stack Web Developer</title>
-    <!-- Google tag (gtag.js) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-JD28TS9V5R"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
 
-      gtag("config", "G-JD28TS9V5R");
-    </script>
     <style>
       /* scrollbar.css */
       .custom-scrollbar {
@@ -362,6 +349,21 @@
         &copy; 2025 Ahmad Mahboob. All rights reserved.
       </div>
     </footer>
+
+    <script>
+      if (window.location.hostname !== "localhost") {
+        const script = document.createElement("script");
+        script.src = "https://www.googletagmanager.com/gtag/js?id=G-JD28TS9V5R";
+        script.async = true;
+        document.head.appendChild(script);
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+          dataLayer.push(arguments);
+        }
+        gtag("js", new Date());
+        gtag("config", "G-JD28TS9V5RY");
+      }
+    </script>
 
     <!-- AOS JS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
