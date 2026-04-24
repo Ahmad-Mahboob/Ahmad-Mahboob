@@ -43,6 +43,7 @@ skills.forEach((skill) => {
         src="${skill.img}"
         alt="${skill.name} Icon"
         class="w-full h-[85%] object-contain ${skill.css_classes}"
+        loading="lazy"
         />
         </div>
         <p class="text-center font-semibold text-4xl md:text-5xl">${skill.name}</p>

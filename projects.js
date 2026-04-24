@@ -53,7 +53,7 @@ projects.forEach((project) => {
               <img
                 src="${project.imgSrc}"
                 alt="Profile"
-                class="object-cover bg-black"
+                class="object-cover bg-black" loacing="lazy"
               />
             </div>
 
