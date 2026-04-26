@@ -351,18 +351,28 @@
     </footer>
 
     <script>
-      if (window.location.hostname !== "localhost") {
+      const isProduction =
+        window.location.hostname !== "localhost" &&
+        window.location.hostname !== "127.0.0.1";
+
+      if (isProduction) {
+        // Load GA script
         const script = document.createElement("script");
         script.src =
           "https://www.googletagmanager.com/gtag/js?id=G-JD28TS9V5RY";
         script.async = true;
         document.head.appendChild(script);
-        window.dataLayer = window.dataLayer || [];
-        function gtag() {
-          dataLayer.push(arguments);
-        }
-        gtag("js", new Date());
-        gtag("config", "G-JD28TS9V5RY");
+
+        // Initialize after script loads
+        script.onload = () => {
+          window.dataLayer = window.dataLayer || [];
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+
+          gtag("js", new Date());
+          gtag("config", "G-JD28TS9V5RY");
+        };
       }
     </script>
 
