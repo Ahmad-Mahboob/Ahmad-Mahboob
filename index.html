@@ -365,32 +365,47 @@
       </div>
     </footer>
 
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-JD28TS9V5R"
-    ></script>
-
+    <!-- Google Analytics -->
     <script>
+      // Define gtag safely (always available)
       window.dataLayer = window.dataLayer || [];
       function gtag() {
         dataLayer.push(arguments);
       }
 
+      // Identify environment
+      const hostname = window.location.hostname;
+
+      const isLocal = hostname === "localhost" || hostname === "127.0.0.1";
+
       const isProduction =
-        window.location.hostname === "ahmadmahboob.me" ||
-        window.location.hostname === "www.ahmadmahboob.me";
+        hostname === "ahmadmahboob.me" || hostname === "www.ahmadmahboob.me";
 
-      gtag("js", new Date());
+      // Load GA script
+      const script = document.createElement("script");
+      script.src = "https://www.googletagmanager.com/gtag/js?id=G-JD28TS9V5R";
+      script.async = true;
+      document.head.appendChild(script);
 
-      if (isProduction) {
-        gtag("config", "G-JD28TS9V5R");
-      } else {
-        // Debug mode for localhost (no real tracking)
-        gtag("config", "G-JD28TS9V5R", {
-          debug_mode: true,
-          send_page_view: false,
-        });
-      }
+      script.onload = () => {
+        gtag("js", new Date());
+
+        if (isProduction) {
+          // ✅ Real tracking only on live domain
+          gtag("config", "G-JD28TS9V5R");
+        } else if (isLocal) {
+          // ❌ No tracking on localhost
+          gtag("config", "G-JD28TS9V5R", {
+            send_page_view: false,
+            debug_mode: true,
+          });
+        } else {
+          // Optional: block unknown environments (like previews)
+          gtag("config", "G-JD28TS9V5R", {
+            send_page_view: false,
+          });
+        }
+      };
     </script>
 
     <!-- AOS JS -->
