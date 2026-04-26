@@ -6,6 +6,21 @@
     <link rel="stylesheet" href="./src/output.css" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <title>Ahmad Mahboob - Full Stack Web Developer</title>
+    <!-- <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-JD28TS9V5R"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-JD28TS9V5R", {
+        debug_mode: true,
+      });
+    </script> -->
 
     <style>
       /* scrollbar.css */
@@ -350,29 +365,31 @@
       </div>
     </footer>
 
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-JD28TS9V5R"
+    ></script>
+
     <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+
       const isProduction =
-        window.location.hostname !== "localhost" &&
-        window.location.hostname !== "127.0.0.1";
+        window.location.hostname === "ahmadmahboob.me" ||
+        window.location.hostname === "www.ahmadmahboob.me";
+
+      gtag("js", new Date());
 
       if (isProduction) {
-        // Load GA script
-        const script = document.createElement("script");
-        script.src =
-          "https://www.googletagmanager.com/gtag/js?id=G-JD28TS9V5RY";
-        script.async = true;
-        document.head.appendChild(script);
-
-        // Initialize after script loads
-        script.onload = () => {
-          window.dataLayer = window.dataLayer || [];
-          function gtag() {
-            dataLayer.push(arguments);
-          }
-
-          gtag("js", new Date());
-          gtag("config", "G-JD28TS9V5RY");
-        };
+        gtag("config", "G-JD28TS9V5R");
+      } else {
+        // Debug mode for localhost (no real tracking)
+        gtag("config", "G-JD28TS9V5R", {
+          debug_mode: true,
+          send_page_view: false,
+        });
       }
     </script>
 
