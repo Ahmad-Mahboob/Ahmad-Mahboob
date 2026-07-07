@@ -3,36 +3,21 @@ const projectsContainer = document.querySelector('#projects');
 const projects = [
   {
     id: 1,
-    name: "Calculator App",
-    description: "I used HTML, CSS and JavaScript to Develop This Completely Functional Calculator App. This Calculator App Can Handle Basic Arithmetic Functions like addition, subtraction, etc. I used HTML, CSS and JavaScript to Develop This Completely Functional Calculator App. This Calculator App Can Handle Basic Arithmetic Functions like addition, subtraction, etc. I used HTML, CSS and JavaScript to Develop This Completely Functional Calculator App. This Calculator App Can Handle Basic Arithmetic Functions like addition, subtraction, etc.I used HTML, CSS and JavaScript to Develop This Completely Functional Calculator App. This Calculator App Can Handle Basic Arithmetic Functions like addition, subtraction, etc.",
-    gitHubLink: "https://github.com/Ahmad-Mahboob/Tic-Tac-Toe-Game",
-    publicLink: "https://ahmad-mahboob.github.io/Tic-Tac-Toe-Game/",
-    imgSrc: "/resources/img/demo.webp"
+    name: "AI RAG Chatbot",
+    description: "An AI-powered chatbot that answers questions using Retrieval-Augmented Generation (RAG). It combines semantic search, vector embeddings, and a large language model to retrieve relevant information before generating accurate responses.",
+    gitHubLink: "https://github.com/Ahmad-Mahboob/AI-RAG-Chatbot",
+    publicLink: "https://www.zsa.ahmadmahboob.me",
+    imgSrc: "/resources/img/ai-rag-chatbot.webp"
   },
   {
-    id: 1,
-    name: "Calculator App",
-    description: "I used HTML, CSS and JavaScript to Develop This Completely Functional Calculator App. This Calculator App Can Handle Basic Arithmetic Functions like addition, subtraction, etc.",
-    gitHubLink: "https://www.github.com",
-    publicLink: "https://www.github.com",
-    imgSrc: "/resources/img/demo.webp"
+    id: 2,
+    name: "Full-Stack Blogging Platform",
+    description: "A responsive blogging platform where users can create, edit, publish, and manage articles. The application includes authentication, database integration, REST APIs, and a clean user interface, demonstrating complete full-stack web development.",
+    gitHubLink: "https://github.com/Ahmad-Mahboob/Full-Stack-Blogging-Platform",
+    publicLink: "https://github.com/Ahmad-Mahboob/Full-Stack-Blogging-Platform",
+    imgSrc: "/resources/img/full-stack-blogging-platform.webp"
   },
-  {
-    id: 1,
-    name: "Calculator App",
-    description: "I used HTML, CSS and JavaScript to Develop This Completely Functional Calculator App. This Calculator App Can Handle Basic Arithmetic Functions like addition, subtraction, etc.",
-    gitHubLink: "https://www.github.com",
-    publicLink: "https://www.github.com",
-    imgSrc: "/resources/img/demo.webp"
-  },
-  {
-    id: 1,
-    name: "Calculator App",
-    description: "I used HTML, CSS and JavaScript to Develop This Completely Functional Calculator App. This Calculator App Can Handle Basic Arithmetic Functions like addition, subtraction, etc.",
-    gitHubLink: "https://www.github.com",
-    publicLink: "https://www.github.com",
-    imgSrc: "/resources/img/demo.webp"
-  },
+
 ];
 
 
@@ -47,7 +32,7 @@ projects.forEach((project) => {
   projectsContainer.insertAdjacentHTML('beforeend', `<div
             data-aos="fade-up"
             data-aos-once="true"
-            class="project w-88 h-96 sm:w-96 sm:h-96 md:w-96 md:h-96 lg:w-112 lg:h-112 xl:w-128 xl:h-128 2xl:w-140 2xl:h-140 bg-gray-200 text-gray-800 shadow-lg shadow-gray-600 border-2 border-gray-300 pb-2 m-2 lg:m-4 rounded-xl transform transition-transform duration-300 hover:scale-105"
+            class="project w-88 h-96 sm:w-96 sm:h-96 md:w-96 md:h-96 lg:w-112 lg:h-112 xl:w-128 xl:h-128 2xl:w-140 2xl:h-140 bg-gray-200 text-gray-800 shadow-lg shadow-gray-600 pb-2 m-2 lg:m-4 rounded-xl transform transition-transform duration-300 hover:scale-105"
           >
             <div class="img w-full h-[55%] overflow-hidden rounded-t-xl">
               <img
@@ -57,7 +42,7 @@ projects.forEach((project) => {
               />
             </div>
 
-            <div class="info p-1.5 flex flex-col justify-between">
+            <div class="info p-1.5 flex flex-col justify-between px-3">
               <div>
                 <p
                   class="font-semibold text-lg leading-none md:text-2xl lg:text-3xl xl:text-4xl"
@@ -81,11 +66,11 @@ projects.forEach((project) => {
                 >
                   <a href="${project.gitHubLink}" class="lg:text-xl xl:text-2xl 2xl:text-3xl"
                     >View Repo
-                    <img
+                    <!-- <img
                       src="/resources/img/GitHub.png"
                       alt=""
                       class="h-5 w-5 xl:w-6 xl:h-6 2xl:h-8 2xl:w-8 inline pb-1"
-                  /></a>
+                  /> --> </a>
                 </button>
                 <button
                   class="px-2 py-1 lg:py-1 lg:px-3 xl:py-3 xl:px-4 2xl:py-4 2xl:px-6 bg-blue-600 rounded-md text-gray-100 transform transition-transform duration-300 hover:scale-105"
