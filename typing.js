@@ -17,11 +17,11 @@ var typed = new Typed("#typed", {
 //     });
 // });
 
-new Typed(".textWhoAmI", {
-    strings: ["Who Am I?", "About Me"],
-    typeSpeed: 120,
-    backSpeed: 100,
-    backDelay: 1000,
-    loop: true,
-    showCursor: false
-});
+// new Typed(".textWhoAmI", {
+//     strings: ["Who Am I?", "About Me"],
+//     typeSpeed: 120,
+//     backSpeed: 100,
+//     backDelay: 1000,
+//     loop: true,
+//     showCursor: false
+// });

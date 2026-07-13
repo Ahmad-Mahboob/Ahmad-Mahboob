@@ -3,6 +3,8 @@ let burgerMenu = document.querySelector('.burgerMenu');
 let nav = document.querySelector('nav');
 let main = document.querySelector('main');
 let burgerCloseBtn = document.querySelector('.burgerCloseBtn');
+let yearText = document.querySelector('.year');
+let darkThemeBtn = document.querySelectorAll('.darkThemeBtn')
 
 burgerBtn.addEventListener('click', () => {
     burgerMenu.classList.remove('translate-x-full');
@@ -90,3 +92,32 @@ form.addEventListener("submit", async function (event) {
         statusMessage.className = "block mt-4 p-4 text-sm text-red-800 bg-red-50 rounded-lg border border-red-200";
     }
 });
+
+const date = new Date();
+const year = date.getFullYear();
+yearText.innerText = year;
+
+
+const html = document.documentElement;
+
+if (localStorage.getItem('theme') == 'dark') {
+    html.classList.add("dark");
+    darkThemeBtn.forEach(btn => btn.classList.add('bg-white'))
+} else {
+    html.classList.remove('dark');
+}
+
+darkThemeBtn.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+        if (!html.classList.contains('dark')) {
+            html.classList.add('dark');
+            localStorage.setItem('theme', 'dark')
+            btn.classList.add('bg-white');
+        }
+        else {
+            html.classList.remove('dark');
+            localStorage.setItem('theme', 'light')
+            btn.classList.remove('bg-white');
+        }
+    })
+})

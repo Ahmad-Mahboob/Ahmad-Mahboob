@@ -24,7 +24,7 @@ const skills = [
     {
         name: 'ExpressJS',
         img: '/resources/img/Express.webp',
-        css_classes: 'invert'
+        css_classes: 'dark:invert'
     },
 ]
 
@@ -36,7 +36,7 @@ skills.forEach((skill) => {
         `<div
         data-aos="fade-up"
         data-aos-delay="100"
-        class="skill bg-neutral-800 text-gray-300 flex flex-col justify-between w-48 h-56 sm:w-50 sm:h-70 md:w-72 md:h-84 m-3 shadow-lg pb-4 pt-4 rounded-lg transform transition-transform duration-300 hover:scale-105"
+        class="skill bg-white dark:bg-[#1E293B] dark:text-gray-100 text-[#475569] flex flex-col justify-between w-40 h-48 md:grow sm:w-50 sm:h-60 md:w-44 md:h-64 md:max-w-50 shadow-lg pb-4 pt-4 rounded-lg transform transition-transform duration-300 hover:scale-105"
         >
         <div class="img overflow-hidden pt-2">
         <img
@@ -46,7 +46,7 @@ skills.forEach((skill) => {
         loading="lazy"
         />
         </div>
-        <p class="text-center font-semibold text-4xl md:text-5xl">${skill.name}</p>
+        <p class="text-center font-semibold text-2xl sm:text-3xl md:text-4xl">${skill.name}</p>
         </div>`
     )
 
